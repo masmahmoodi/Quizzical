@@ -18,7 +18,7 @@ export default function Starter(props) {
           <div className="blob-top"></div>
           <div className="starter">
             <h1>Quizzical</h1>
-            <p>Some description if needed</p>
+            <p>Test your general knowledge here  <i class="fa-solid fa-face-smile"></i></p>
             <button className="start-btn" onClick={handleClick}>
               Start Quiz
             </button>
