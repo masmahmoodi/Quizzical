@@ -102,7 +102,6 @@ form h1 {
 }
 
 form {
-
     padding: 20px;
     max-width: 900px;
     z-index: 2;
@@ -201,25 +200,6 @@ hr {
 }
 
 
-/* mobile */
-
-@media(max-width:480px){
-  form h1{
-    font-size: 16px;
-  }
-  .button label{
-    font-size: 10.24px;
-    padding: 5px 10px;
-  }
-  h3{
-    font-size: 12.8px;
-  }
-
-  .play-again button{
-    width:110px ;
-  }
-}
-
 
 /* tablet */
 
@@ -235,5 +215,26 @@ hr {
   h3{
     font-size: 16px;
     font-weight: 700;
+  }
+}
+
+
+
+/* mobile */
+
+@media(max-width:480px){
+  form h1{
+    font-size: 16px;
+  }
+  .button label{
+    font-size: 10.24px;
+    padding: 5px 10px;
+  }
+  h3{
+    font-size: 12.8px;
+  }
+
+  .play-again button{
+    width:100px ;
   }
 }
