@@ -1,3 +1,4 @@
+
 *,
 #root {
     padding: 0;
@@ -9,38 +10,63 @@ body {
     position: relative;
 }
 
+button {
+    color: #F5F7FB;
+    background-color: #4D5B9E;
+    border: none;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+button:hover {
+    background-color: #293264;
+}
+
+button:active {
+    background-color: #388e3c;
+    transform: translateY(2px);
+}
+
+/* Flex Containers */
 main,
 .play-again {
     display: flex;
     align-items: center;
+    justify-content: center;
+    z-index: 2;
 }
 
 main {
     background-color: #F5F7FB;
     min-height: 100vh;
-    justify-content: center;
     position: relative;
-    z-index: 1; 
+    z-index: 1;
 }
 
+.play-again {
+    margin-top: 20px;
+}
+
+/* Blobs */
 .blob-top,
 .blob-bottom,
 .blob-bottom-question,
 .blob-top-question {
     position: absolute;
-    z-index: -1; 
+    z-index: -1;
 }
 
-.blob-top-question,
-.blob-top{
-  right: 0;
-  top: 0;
-  background-color: #FFFAD1;
-  border-radius: 59% 41% 0% 100% / 0% 0% 100% 100%;
+.blob-top,
+.blob-top-question {
+    right: 0;
+    top: 0;
+    background-color: #FFFAD1;
+    border-radius: 59% 41% 0% 100% / 0% 0% 100% 100%;
 }
-.blob-top-question{
-  width: 150px;
-  height: 150px;
+
+.blob-top-question {
+    width: 150px;
+    height: 150px;
 }
 
 .blob-top {
@@ -56,24 +82,20 @@ main {
     border-radius: 54% 46% 100% 0% / 0% 100% 0% 100%;
 }
 
-.blob-bottom{
-  width: 200px;
-  height: 150px;
+.blob-bottom {
+    width: 200px;
+    height: 150px;
 }
 
-.blob-bottom-question{
-  width: 150px;
-  height: 100px;
+.blob-bottom-question {
+    width: 150px;
+    height: 100px;
 }
 
+/* Text Styles */
 .starter,
 .ans-btn {
     text-align: center;
-    z-index: 2; 
-}
-
-.play-again {
-    justify-content: center;
     z-index: 2;
 }
 
@@ -83,11 +105,11 @@ form h1,
 h3 {
     color: #293264;
     z-index: 2;
+    font-family: "Karla", sans-serif;
 }
 
 h3 {
     margin-right: 20px;
-    z-index: 2;
 }
 
 form h1,
@@ -98,19 +120,16 @@ h3 {
 form h1 {
     font-size: 25px;
     font-weight: bold;
-    z-index: 2; 
 }
 
 form {
     padding: 20px;
     max-width: 900px;
-    z-index: 2;
 }
 
 .starter h1 {
     font-size: 31.25px;
     font-weight: bold;
-    z-index: 2;
 }
 
 .starter p {
@@ -118,46 +137,20 @@ form {
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 20px;
-    z-index: 2;
 }
 
-button {
-    color: #F5F7FB;
-    background-color: #4D5B9E;
-    border: none;
-    border-radius: 10px;
-    z-index: 2; 
-}
-
-
-button:hover{
-  background-color: #293264;
-}
-
+/* Buttons */
 .start-btn {
     font-size: 16px;
     font-weight: 500;
     padding: 14.5px 5px;
     width: 193px;
     font-family: "Inter", sans-serif;
-    z-index: 2; 
-}
-
-.ans-btn,
-.play-again {
-    margin-top: 20px;
-    z-index: 2; 
-}
-
-button:active {
-    background-color: #388e3c;
-    transform: translateY(2px);
 }
 
 .button {
-    display:inline-block;
+    display: inline-block;
     margin-right: 10px;
-    z-index: 2;
 }
 
 .button input[type="radio"] {
@@ -173,23 +166,12 @@ button:active {
     border: 1px solid #4D5B9E;
     border-radius: 50px;
     cursor: pointer;
-    z-index: 2; 
 }
 
-.button input[type="radio"]:checked + label {
-    background-color: #D6DBF5;
-    border: transparent;
-}
+.button input[type="radio"]:checked + label,
 .button input[type="radio"]:hover + label {
     background-color: #D6DBF5;
-}
-
-form h1,
-.button,
-hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    z-index: 2;
+    border: transparent;
 }
 
 #correct-answer,
@@ -203,46 +185,50 @@ hr {
 
 #correct-answer,
 #wrong-answer,
-.correct{
-  border: transparent;
+.correct {
+    border: transparent;
 }
 
-
-
-/* tablet */
-
-@media(max-width:768px){
-  form h1{
-    font-size: 20px;
-  }
-  .button label{
-    font-size: 13px;
-    padding: 5px 15px;
-  }
-
-  h3{
-    font-size: 16px;
-    font-weight: 700;
-  }
+/* Margins */
+form h1,
+.button,
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    form h1 {
+        font-size: 20px;
+    }
 
+    .button label {
+        font-size: 13px;
+        padding: 5px 15px;
+    }
 
-/* mobile */
+    h3 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
 
-@media(max-width:480px){
-  form h1{
-    font-size: 16px;
-  }
-  .button label{
-    font-size: 10.24px;
-    padding: 5px 10px;
-  }
-  h3{
-    font-size: 12.8px;
-  }
+@media (max-width: 480px) {
+    form h1 {
+        font-size: 16px;
+    }
 
-  .play-again button{
-    width:100px ;
-  }
+    .button label {
+        font-size: 10.24px;
+        padding: 5px 10px;
+    }
+
+    h3 {
+        font-size: 12.8px;
+    }
+
+    .play-again button {
+        width: 100px;
+    }
 }
