@@ -7,9 +7,9 @@ export default function Question(props) {
   useEffect(() => {
     function gettingAnswers() {
       const answers = []
-      answers.push(props.data.correct_answer);
+      answers.push(he.decode(props.data.correct_answer));
       props.data.incorrect_answers.forEach(ans => {
-        answers.push(ans)
+        answers.push(he.decode(ans))
       })
       answers.sort(() => Math.random() - 0.5)
       return answers
