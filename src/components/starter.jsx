@@ -8,7 +8,6 @@ export default function Starter(props) {
     await props.handleClick()
     setOnRunning(false) 
   }
-
   return (
     <>
       {onRunning ? ( 

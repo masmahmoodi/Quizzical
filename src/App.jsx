@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import he from "he"
 import Starter from "./components/starter"
 import Question from "./components/Question"
 

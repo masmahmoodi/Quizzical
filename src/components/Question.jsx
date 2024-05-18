@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import he from "he"
+import he from "he"    // for decoding questions 
 
 export default function Question(props) {
   const [answers, setAnswers] = React.useState([])
