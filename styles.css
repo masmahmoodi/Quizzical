@@ -168,10 +168,10 @@ form {
     cursor: pointer;
 }
 
+
 .button input[type="radio"]:checked + label,
 .button input[type="radio"]:hover + label {
     background-color: #D6DBF5;
-    border: transparent;
 }
 
 #correct-answer,
@@ -185,7 +185,8 @@ form {
 
 #correct-answer,
 #wrong-answer,
-.correct {
+.correct,
+.button input[type="radio"]:checked + label {
     border: transparent;
 }
 
